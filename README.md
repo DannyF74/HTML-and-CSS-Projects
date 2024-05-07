@@ -12,4 +12,4 @@ cards, and dropdowns.
 ### Trail Blazers Site
 This site is an example of a homepage of a fan website for the Portland Trail Blazers. This site uses CSS to style a Navbar, image containers and a form.
 
-<sub><sup>As I've just moved to Portland from the UK, I need all the practice I can get to learn the sport and the team!</sup></sub>
+<sub><sup>Having just moved to Portland from the UK, I need all the practice I can get to learn the sport and the team!</sup></sub>
