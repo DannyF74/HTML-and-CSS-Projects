@@ -4,6 +4,7 @@
 		<title>Portland Tourism Bureau</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="./CSS/one_page_website.css">
+		<script src="./JS/one_page_website.js" defer></script>
 	</head>
 	
 	<body>
@@ -35,35 +36,63 @@
 		<section>	
 			<div id="pictures">
 			<h3>Here are some of our favorite spots in and around Portland</h3>
-				<div>
-					
-					<!--Photo Container 1-->
-					<div>
-						<img src="./images/thumbs/mt_hood.jpg" alt="Mt Hood">
-						<div>
-							<h4>Mt Hood</h4>
+				<!-- Images used to open the lightbox -->
+				<div class="row">
+					<div class="column">
+						<img src="./images/thumbs/mt_hood_small.jpg" onclick="openModal(); currentSlide(1)" class="hover-shadow" alt="Mt Hood">
+					</div>
+					<div class="column">
+						<img src="./images/thumbs/powells_small.jpg" onclick="openModal(); currentSlide(2)" class="hover-shadow" alt="Powells Bookstore">
+					</div>
+					<div class="column">
+						<img src="./images/thumbs/voodoo_small.jpg" onclick="openModal(); currentSlide(3)" class="hover-shadow" alt="Voodoo Doughnut">
+					</div>
+				</div>
+
+				<!-- The Modal/Lightbox -->
+				<div id="myModal" class="modal">
+					<span class="close cursor" onclick="closeModal()">&times;</span>
+					<div class="modal-content">
+
+						<div class="mySlides">
+							<div class="numberText">1 / 3</div>
+							<img src="./images/thumbs/mt_hood_1080p.jpg" style="width: 100%;">
+						</div>
+
+						<div class="mySlides">
+							<div class="numberText">2 / 3</div>
+							<img src="./images/thumbs/powells_1080p.jpg" style="width: 100%;">
+						</div>
+
+						<div class="mySlides">
+							<div class="numberText">3 / 3</div>
+							<img src="./images/thumbs/voodoo_1080p.jpg" style="width: 100%;">
+						</div>
+
+						<!-- Next and Previous controls -->
+						<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+						<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+						<!-- Caption Text -->
+						<div class="caption-container">
+							<p id="caption"></p>
+						</div>
+
+						<!-- Thumbnail Image Controls -->
+						<div class="demo-center">
+							<div class="column">
+								<img class="demo" src="./images/thumbs/mt_hood_small.jpg" onclick="currentSlide(1)" alt="Mt Hood">
+							</div>
+
+							<div class="column">
+								<img class="demo" src="./images/thumbs/powells_small.jpg" onclick="currentSlide(2)" alt="Powells Bookstore">
+							</div>
+
+							<div class="column">
+								<img class="demo" src="./images/thumbs/voodoo_small.jpg" onclick="currentSlide(3)" alt="Voodoo Doughnut">
+							</div>
 						</div>
 					</div>
-					<!---End Photo Container 1-->
-					
-					<!--Photo Container 2-->
-					<div>
-						<img src="./images/thumbs/powells.jpg" alt="Powells Book Store">
-						<div>
-							<h4>Powells Book Store</h4>
-						</div>
-					</div>
-					<!---End Photo Container 2-->
-						
-					<!--Photo Container 3-->
-					<div>
-						<img src="./images/thumbs/voodoo.jpg" alt="Voodoo Donuts">
-						<div>
-							<h4>Voodoo Donuts</h4>
-						</div>
-					</div>
-					<!---End Photo Container 3-->
-				
 				</div>
 			</div>
 		</section>
